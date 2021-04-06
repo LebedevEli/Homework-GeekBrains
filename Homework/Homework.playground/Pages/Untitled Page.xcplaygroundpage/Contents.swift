@@ -11,33 +11,33 @@ var x2:Float
 var d:Float
 var discriminant:Float
 
-d = pow(b, 2) - (4 * a * c)
+d = pow(b, 2) - 4 * a * c
 
-if(d >= 0){
+if d >= 0 {
     discriminant = sqrt(d)
     x1 = (-b + discriminant) / (2 * a)
-    x2 = (-b - (discriminant)) / (2 * a)
+    x2 = (-b - discriminant) / (2 * a)
     
     print(x1, x2)
 
-} else if(d < 0){
-    d = ((4 * a * c) - pow(b, 2)) / (2 * a)
+} else if d < 0 {
+    d = (4 * a * c - pow(b, 2)) / (2 * a)
     print("Задание 1: Квадратное уравнение", d)
 }
 
 //: 2. Даны катеты прямоугольного треугольника. Найти площадь, периметр и гипотенузу треугольника.
 
-var cathetA:Float = 4.0
-var cathetB:Float = 6.0
-var hypotenuse = Float(sqrt(pow(a, 2) + pow(b, 2)))
+var cathetA:Float = 4
+var cathetB:Float = 6
+var hypotenuse = sqrt(pow(a, 2) + pow(b, 2))
 var perimeter = cathetA + cathetB + hypotenuse
 var square = (cathetA * cathetB) / 2
 print("Задание 2: Площадь равна", square, "Периметр равен", perimeter, "Гипотенуза равна", hypotenuse)
 
 //:3.  *Пользователь вводит сумму вклада в банк и годовой процент. Найти сумму вклада через 5 лет.
 
-var summ = 1000
-var percent = 12
+var summ: Decimal = 1500
+var percent: Decimal = 12.21
 
 var money = (summ / 100) * percent
 print("Сумма вашего вклада за первый год равен ", +(summ + money))
